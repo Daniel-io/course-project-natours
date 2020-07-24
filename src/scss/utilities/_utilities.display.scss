@@ -1,0 +1,77 @@
+/* ==========================================================================
+   #DISPLAY
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+.u-display-block {
+  display: block !important;
+}
+
+.u-display-inline {
+  display: inline !important;
+}
+
+.u-display-inline-block {
+  display: inline-block !important;
+}
+
+.u-display-none {
+  display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+@each $breakpoint, $postfix in $breakpoints {
+  @include mq($breakpoint) {
+
+
+
+
+
+
+
+
+
+
+  .u-display-block#{$postfix} {
+    display: block !important;
+  }
+
+  .u-display-inline#{$postfix} {
+    display: inline !important;
+  }
+
+  .u-display-inline-block#{$postfix} {
+    display: inline-block !important;
+  }
+
+  .u-display-none#{$postfix} {
+    display: none !important;
+  }
+
+
+
+
+
+
+
+
+
+
+  }
+}

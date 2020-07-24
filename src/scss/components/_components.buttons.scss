@@ -1,0 +1,438 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+$button-padding-vertical:        $global-spacing-unit-sm;
+$button-padding-horizontal:      $global-spacing-unit;
+
+$button-padding-vertical-sm:     $global-spacing-unit-xs;
+$button-padding-horizontal-sm:   $global-spacing-unit-sm;
+
+$button-padding-vertical-lg:     $global-spacing-unit;
+$button-padding-horizontal-lg:   $global-spacing-unit-lg;
+
+$button-transition:              $global-transition;
+$button-radius:                  $global-radius;
+
+$button-ghost-border-width:      rem(2px); //Must be in rem units for calc() function
+
+
+
+
+
+
+
+
+
+
+/**
+*
+* 1. Allow the use of style box model properties.
+* 2. Line up different sized buttons.
+* 3. Make buttons inherit font styles (often necessary when styling `input`s as
+*    buttons).
+* 4. Reset/normalize styles.
+
+* 5. Force all button-styled elements to appear clickable.
+*
+*/
+
+
+.c-btn {
+  /* Position */
+  position: relative;
+
+  /* Box model */
+  display: inline-block;                                            /* 1 */
+  vertical-align: middle;                                           /* 2 */
+  margin: 0;                                                        /* 4 */
+  padding: $button-padding-vertical $button-padding-horizontal;
+
+  /* Typography */
+  font: inherit;                                                    /* 3 */
+  text-align: center;                                               /* 4 */
+  text-decoration: none;                                            /* 4 */
+
+  /* Visual */
+  background-color: transparent;
+  cursor: pointer;                                                  /* 5 */
+  border: unset;
+  border-radius: $button-radius;
+
+  /* Misc */
+  transition: $button-transition;
+}
+
+
+
+
+
+
+
+
+
+
+/* UI variants
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+.c-btn--primary {
+  background-color: $color-primary;
+  
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none; 
+    color: #fff;
+  }
+  
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary-shadow;
+  }
+}
+
+
+
+
+
+.c-btn--secondary {
+  background-color: $color-secondary;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none; 
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-secondary-shadow;
+  }
+}
+
+
+
+
+
+.c-btn--tertiary {
+  background-color: $color-tertiary;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none; 
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-tertiary-shadow;
+  }
+}
+
+
+
+
+
+.c-btn--success {
+  background-color: $color-success;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none; 
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-success-shadow;
+  }
+}
+
+
+
+
+
+.c-btn--error {
+  background-color: $color-error;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none; 
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-error-shadow;
+  }
+}
+
+
+
+
+
+.c-btn--link {
+  background-color: unset;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $blue;
+    border: unset;
+    text-decoration: underline;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+
+
+
+
+.c-btn--flat {
+  background-color: unset;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    color: inherit;
+    border: unset;
+  }
+
+  &:hover,
+  &:focus {
+    color: currentColor;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Size variants
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+.c-btn--sm {
+  padding: $button-padding-vertical-sm $button-padding-horizontal-sm;
+}
+
+.c-btn--lg {
+  padding: $button-padding-vertical-lg $button-padding-horizontal-lg;
+}
+  
+
+
+
+
+
+
+
+
+
+/* Ghost buttons
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+/**
+* Ghost buttons have see-through backgrounds and are bordered.
+*/
+
+.c-btn--ghost {
+  border:  $button-ghost-border-width solid currentColor;
+  padding: calc(#{$button-padding-vertical} - #{$button-ghost-border-width})  calc(#{$button-padding-horizontal} - #{$button-ghost-border-width}); 
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    background: none;
+  }
+
+
+
+
+  &.c-btn--primary {
+    color: $color-primary;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: $color-primary-shadow;
+      border: $button-ghost-border-width solid  $color-primary-shadow;
+    }
+
+  }
+
+
+
+
+
+  &.c-btn--secondary {
+    color: $color-secondary;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: $color-secondary-shadow;
+      border: $button-ghost-border-width solid  $color-secondary-shadow;
+    }
+
+  }
+
+
+
+
+
+  &.c-btn--tertiary {
+    color: $color-tertiary;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: $color-tertiary-shadow;
+      border: $button-ghost-border-width solid  $color-tertiary-shadow;
+    }
+
+  }
+
+
+
+
+
+  &.c-btn--success {
+    color: $color-success;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: $color-success-shadow;
+      border: $button-ghost-border-width solid  $color-success-shadow;
+    }
+
+  }
+
+
+
+
+
+  &.c-btn--error {
+    color: $color-error;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: $color-error-shadow;
+      border: $button-ghost-border-width solid  $color-error-shadow;
+    }
+
+  }
+
+
+
+
+
+  &.c-btn--sm {
+    padding: calc(#{$button-padding-vertical-sm} - #{$button-ghost-border-width}) calc(#{$button-padding-horizontal-sm} - #{$button-ghost-border-width});
+  }
+
+  &.c-btn--lg {
+    padding: calc(#{$button-padding-vertical-lg} - #{$button-ghost-border-width}) calc(#{$button-padding-horizontal-lg} - #{$button-ghost-border-width});
+  }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* Width variant
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+.c-btn--block {
+  display: block;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+  

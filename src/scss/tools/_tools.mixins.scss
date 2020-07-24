@@ -1,0 +1,158 @@
+/* ==========================================================================
+  #MIXINS
+  ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+/* Clearfix
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+/*  
+*  Mixin to drop micro clearfix into a selector.
+*
+*   .simple-usage {
+*     @include clearfix();
+*   }
+*
+*   .detailed-usage {
+*     @include clearfix(important);
+*   }
+*/
+
+
+
+
+
+@mixin clearfix($important: false) {
+
+  // Determine whether or not to make declarations important.
+  @if ($important == false) {
+    $important: null;
+
+  } @else {
+    $important: !important;
+    
+  }
+
+
+/**
+* For certain browsers
+*
+* 1. The space content is one way to avoid an Opera bug when the contenteditable
+*    attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that are clearfixed.
+*
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+
+
+  &:before, 
+  &:after {
+    content: "" $important;
+    display: table $important;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  zoom: 1;      /* For IE 6/7 (trigger hasLayout) */
+}
+
+
+
+
+
+
+
+
+
+
+/* Centering
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+@mixin margin-auto-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* Hover
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+@mixin hover($canhover) {
+
+  @if ($canhover == false) {
+    @media only screen and (hover: none) { @content };
+
+  } @else if ($canhover == true) {
+    @media only screen and (hover: hover) { @content };
+
+  }
+}
+
+
+
+
+
+
+
+
+
