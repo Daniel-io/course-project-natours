@@ -17,15 +17,9 @@
 
 
 $white:                 #fff !default;
-$gray-100:              #f8f9fa !default;
-$gray-200:              #e9ecef !default;
-$gray-300:              #dee2e6 !default;
-$gray-400:              #ced4da !default;
-$gray-500:              #adb5bd !default;
-$gray-600:              #6c757d !default;
-$gray-700:              #495057 !default;
-$gray-800:              #343a40 !default;
-$gray-900:              #212529 !default;
+$gray-100:              #f7f7f7 !default;
+$gray-200:              #777  !default;
+$gray-300:              #333 !default;
 $black:                 #000 !default;
 
 
@@ -40,6 +34,13 @@ $yellow:                #ffc107 !default;
 $green:                 #28a745 !default;
 $teal:                  #20c997 !default;
 $cyan:                  #17a2b8 !default;
+
+
+
+
+
+
+
 
              
 
@@ -62,17 +63,45 @@ $cyan:                  #17a2b8 !default;
 
 
 
-$color-primary:                     $blue !default;
+$color-primary:                     #55c57a !default;
 $color-primary-highlight:           lighten($color-primary, 5%) !default;
 $color-primary-shadow:              darken($color-primary,  5%) !default;
 
-$color-secondary:                   $yellow !default;
+$color-primary-light:               #7ed56f !default;
+$color-primary-light-highlight:     lighten($color-primary, 5%) !default;
+$color-primary-lightshadow:         darken($color-primary,  5%) !default;
+
+$color-primary-dark:                #28b485 !default;
+$color-primary-dark-highlight:      lighten($color-primary, 5%) !default;
+$color-primary-dark-shadow:         darken($color-primary,  5%) !default;
+
+
+
+
+
+$color-secondary:                   #ffb900  !default;
 $color-secondary-highlight:         lighten($color-secondary, 5%) !default;
 $color-secondary-shadow:            darken($color-secondary,  5%) !default;
 
-$color-tertiary:                    $indigo !default;
+$color-secondary-dark:              #ff7730  !default;
+$color-secondary-dark-highlight:    lighten($color-secondary, 5%) !default;
+$color-secondary-dark-shadow:       darken($color-secondary,  5%) !default;
+
+
+
+
+
+$color-tertiary:                    #2998ff  !default;
 $color-tertiary-highlight:          lighten($color-tertiary, 5%) !default;
 $color-tertiary-shadow:             darken($color-tertiary,  5%) !default;
+
+$color-tertiary-dark:               #5643fa  !default;
+$color-tertiary-dark-highlight:     lighten($color-tertiary, 5%) !default;
+$color-tertiary-dark-shadow:        darken($color-tertiary,  5%) !default;
+
+
+
+
 
 $color-success:                     $green !default;
 $color-success-highlight:           lighten($color-success, 5%) !default;
@@ -82,6 +111,10 @@ $color-error:                       $red !default;
 $color-error-highlight:             lighten($color-error, 5%) !default;
 $color-error-shadow:                darken($color-error,  5%) !default;
 
+
+
+
+$text-color:                        $gray-200;
 
 
 
