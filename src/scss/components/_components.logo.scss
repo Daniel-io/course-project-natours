@@ -1,0 +1,31 @@
+/* ==========================================================================
+   #LOGO
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+$logo-size        : $global-spacing-unit * 2;
+$logo-size-lg     : $logo-size * 2;
+$logo-size-sm     : $logo-size / 2;
+
+
+
+
+
+
+
+
+
+
+.c-logo {
+  display: inline-block;
+  height: $logo-size-sm;
+}
+
