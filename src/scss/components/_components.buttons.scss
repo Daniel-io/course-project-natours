@@ -108,8 +108,9 @@ $button-ghost-border-width:      rem(2px); //Must be in rem units for calc() fun
 
   &:hover,
   &:focus {
-    background-color: $color-primary-shadow;
+    background-color: $color-primary-shadow;   
   }
+  
 }
 
 
@@ -215,6 +216,7 @@ $button-ghost-border-width:      rem(2px); //Must be in rem units for calc() fun
   &:focus {
     background-color: $white;
   }
+  
 }
 
 
@@ -315,8 +317,9 @@ $button-ghost-border-width:      rem(2px); //Must be in rem units for calc() fun
 */
 
 .c-btn--ghost {
-  border:  $button-ghost-border-width solid currentColor;
-  padding: calc(#{$button-padding-vertical} - #{$button-ghost-border-width})  calc(#{$button-padding-horizontal} - #{$button-ghost-border-width}); 
+  border-bottom:  $button-ghost-border-width solid currentColor;
+  padding: calc(#{$button-padding-vertical} - #{$button-ghost-border-width})  .5rem; 
+  border-radius: 0;
 
   &,
   &:hover,
@@ -501,6 +504,24 @@ $button-ghost-border-width:      rem(2px); //Must be in rem units for calc() fun
 
 }  
 
+
+
+
+
+.c-btn--rise {
+
+  &:hover,
+  &:focus {
+    transform: translateY(-3px);
+    box-shadow: $global-box-shadow;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: $global-box-shadow-sm;
+  }
+
+}
 
 
 
