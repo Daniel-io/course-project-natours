@@ -15,8 +15,16 @@
    white-space: nowrap;
 }
 
-
 ._skew-section {
-   margin-top:  calc(#{$global-spacing-unit-lg} * -2.5);
-   padding-top: calc(#{$global-spacing-unit-lg} * 3.5);
+   margin-top:  calc(#{$global-spacing-unit} * -2.5);
+   padding-top: calc(#{$global-spacing-unit} * 3.5);
+
+   @include mq(sm) {
+      margin-top:  calc(#{$global-spacing-unit-lg} * -2.5);
+      padding-top: calc(#{$global-spacing-unit-lg} * 3.5);
+   }
+}
+
+._pb--fl {
+   padding-bottom: 0;
 }

@@ -12,7 +12,8 @@
 
 
 .c-heading-tertiary {
-  font-size: $font-size-h5;
+  font-size: $font-size-h6;
   font-weight: 400;
   color: darken($text-color, $amount: 15%);
+  text-transform: uppercase;
 }

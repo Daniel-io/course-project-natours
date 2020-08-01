@@ -1,0 +1,33 @@
+/* ==========================================================================
+   #FEATURES
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+.c-features {
+  background-image: linear-gradient(to bottom right, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)),
+                    url('../img/nat-4.webp');
+  background-position: center;
+  background-size: cover;
+
+  transform: skewY(-5deg);
+
+  & > * {
+    transform: skewY(5deg);
+  }
+}
+
+
+.c-features__card {
+  transition: $global-transition;
+
+  &:hover {
+    transform: scale(1.05) translateY(-1rem);
+  }
+}

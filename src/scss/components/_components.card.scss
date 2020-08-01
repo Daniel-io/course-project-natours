@@ -1,0 +1,55 @@
+/* ==========================================================================
+   #CARD
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+$card-padding        :  $global-spacing-unit;
+$card-color          :  null;
+$card-bg             :  $white;
+
+$card-border-width   :  1px;
+$card-border-color   :  null;
+$card-border-radius  :  $global-radius;
+
+
+
+
+
+
+
+
+.c-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  border: null;
+  border-radius: $card-border-radius;
+  background-color: $card-bg;
+}
+
+
+.c-card__header {
+  padding: $card-padding;
+  margin-bottom: 0;
+}
+
+
+.c-card__body {
+  padding: $card-padding;
+  margin-bottom: 0;
+}
+
+
+.c-card__footer {
+  padding: $card-padding;
+  margin-bottom: 0;  
+}
