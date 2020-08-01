@@ -57,6 +57,7 @@
 * COMPONENTS
 * Avatar...............Avatar image.
 * Buttons..............Button styles.
+* Composition..........Image composition.
 * Heading-masthead.....Masthead heading.
 * Heading-section......Page heading section.
 * Heading-tertiary.....Tertiary heading.
@@ -134,6 +135,7 @@
 
 @import "components/components.avatar";
 @import "components/components.buttons";
+@import "components/components.composition";
 @import "components/components.heading-masthead";
 @import "components/components.heading-section";
 @import "components/components.heading-tertiary";

@@ -1,0 +1,68 @@
+/* ==========================================================================
+   #COMPOSITION
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+.c-composition {
+  position: relative;
+}
+
+.c-composition__img {
+  position: absolute;
+  width: 33.333%;
+  border-radius: 3px;
+  box-shadow: $global-box-shadow;
+  transition: $global-transition;
+
+  @include mq(sm) {
+    width: 55.55%;
+  }
+
+  &:hover {
+    @include hover(true) {
+      transform: scale(1.1);
+      outline: 10px solid $color-primary;
+      outline-offset: 1rem;
+      z-index: 5;
+    }
+  }
+}
+
+.c-composition__img--one {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.c-composition__img--two {
+  top: -.8rem;
+  left: 33%;
+  transform: scale(1.1);
+  z-index: 4;
+
+  @include mq(sm) {
+    top: 3rem;
+    right: 0;
+    transform: scale(1);
+    left: unset;
+    z-index: 2;
+  }
+}
+
+.c-composition__img--three {
+  right: 0;
+  z-index: 3;
+
+  @include mq(sm) {
+    top: 8rem;
+    left: 5rem;
+  }
+}
