@@ -24,10 +24,20 @@
    display: block;
    font-size: 2.5rem;
    letter-spacing: 6px;
+   
+   @include mq(sm) {
+      font-size: $font-size-h1;
+      letter-spacing: 10px;
+   }
 }
 
 .c-heading-masthead__sub {
    display: block;
    font-size: 1rem;
    letter-spacing: 2px;
+   
+   @include mq(sm) {
+      font-size: $font-size-h4;
+      letter-spacing: 8px;
+   }
 }

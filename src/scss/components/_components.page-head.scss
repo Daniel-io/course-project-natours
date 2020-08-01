@@ -21,6 +21,7 @@
 .c-page-head__content {
    @include absolute-center;
    width: 100%;
+   margin-top: -5%;
 }
 
 
@@ -53,6 +54,10 @@
    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
    
 
+   @include mq(sm) {
+      height: 95vh;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+   }
 
    @media(-webkit-min-device-pixel-ratio: 2.0), (min-resolution: 120dpi) {
       background-image: linear-gradient(to bottom right, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)),

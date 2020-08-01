@@ -58,6 +58,8 @@
 * Avatar...............Avatar image.
 * Buttons..............Button styles.
 * Heading-masthead.....Masthead heading.
+* Heading-section......Page heading section.
+* Heading-tertiary.....Tertiary heading.
 * List-group...........List-group UI.
 * Logo.................Site logo.
 * Modal................Modal structure.
@@ -133,6 +135,8 @@
 @import "components/components.avatar";
 @import "components/components.buttons";
 @import "components/components.heading-masthead";
+@import "components/components.heading-section";
+@import "components/components.heading-tertiary";
 @import "components/components.list-group";
 @import "components/components.logo";
 @import "components/components.modal";

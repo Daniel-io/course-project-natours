@@ -1,0 +1,23 @@
+/* ==========================================================================
+   #HEADING SECTION
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+.c-heading-section {
+  font-size: $font-size-h4;
+  background-image: linear-gradient(to bottom right, rgba($color-primary-light, .8), rgba($color-primary-dark, .8));
+  background-clip: text;
+  color: transparent;
+  
+  @include mq(sm){
+    font-size: $font-size-h3;
+  } 
+}   
