@@ -12,11 +12,16 @@
 
 
 .c-page-head {
+  position: relative;
   padding-top: $global-spacing-unit;
   padding-bottom: $global-spacing-unit;
   background-color: $color-primary;
 }
 
+.c-page-head__content {
+   @include absolute-center;
+   width: 100%;
+}
 
 
 
@@ -39,10 +44,12 @@
 
 
 .c-page-head--masthead {
-   height: 95vh;
+   height: 65vh;
    background-image: linear-gradient(to bottom right, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)),
                      url('../img/hero-small.jpg');
+   background-repeat: no-repeat;
    background-position: top center;
+   background-size: cover;
    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
    
 
