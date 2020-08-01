@@ -24,5 +24,7 @@
   "browserslist": [
     "last 4 version"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "imagemin-svgo": "^8.0.0"
+  }
 }
