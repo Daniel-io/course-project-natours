@@ -29,6 +29,9 @@ const cleanCSS       = require('gulp-clean-css');           /* 3 */
 const browserSync    = require('browser-sync').create()     /* 4 */
 const concat         = require('gulp-concat');
 
+const imagemin       = require('imagemin');
+const imageminWebp   = require('imagemin-webp');
+
 sass.compiler = require('node-sass');
 
 
@@ -105,6 +108,31 @@ function js() {
 
 
 
+function webp() {
+  
+  //Convert images to webp
+  (async () => {
+    await imagemin(['src/img/*.{jpg,png}'], {
+      destination: 'docs/img',
+      plugins: [
+        imageminWebp({quality: 50})
+      ]
+    });
+
+    console.log('Images optimized');
+  })();
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 watch('src/scss/**/*.scss', css ).on('change', browserSync.reload);
@@ -120,6 +148,9 @@ watch('src/js/**/*.js', js ).on('change', browserSync.reload);
 
 
 
-exports.js = js;
+exports.server = server;
 exports.css = css;
-exports.default = parallel(server, css, js);
+exports.js = js;
+exports.webp = webp;
+
+exports.default = parallel(server, css, js, webp);

@@ -46,7 +46,7 @@
 .c-page-head--masthead {
    height: 65vh;
    background-image: linear-gradient(to bottom right, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)),
-                     url('../img/hero-small.jpg');
+                     url('../img/hero-small.webp');
    background-repeat: no-repeat;
    background-position: top center;
    background-size: cover;
@@ -56,6 +56,6 @@
 
    @media(-webkit-min-device-pixel-ratio: 2.0), (min-resolution: 120dpi) {
       background-image: linear-gradient(to bottom right, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)),
-      url('../img/hero.jpg');
+      url('../img/hero.webp');
    }
 }
