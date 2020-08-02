@@ -31,7 +31,7 @@ const concat         = require('gulp-concat');
 
 const imagemin       = require('imagemin');
 const imageminWebp   = require('imagemin-webp');
-const imageminSvgo = require('imagemin-svgo');
+
 
 sass.compiler = require('node-sass');
 

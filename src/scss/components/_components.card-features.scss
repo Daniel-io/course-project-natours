@@ -1,0 +1,55 @@
+/* ==========================================================================
+   #CARD FEATURES
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+$card-features-padding        :  $global-spacing-unit;
+$card-features-color          :  null;
+$card-features-bg             :  $white;
+
+$card-features-border-width   :  1px;
+$card-features-border-color   :  null;
+$card-features-border-radius  :  $global-radius;
+
+
+
+
+
+
+
+
+.c-card-features  {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  border: null;
+  border-radius: $card-features-border-radius;
+  background-color: $card-features-bg;
+}
+
+
+.c-card-features__header {
+  padding: $card-features-padding;
+  margin-bottom: 0;
+}
+
+
+.c-card-features__body {
+  padding: $card-features-padding;
+  margin-bottom: 0;
+}
+
+
+.c-card-features__footer {
+  padding: $card-features-padding;
+  margin-bottom: 0;  
+}

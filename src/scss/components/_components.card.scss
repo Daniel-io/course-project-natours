@@ -1,6 +1,187 @@
 /* ==========================================================================
-   #CARD
-   ========================================================================== */
+  #CARD
+  ========================================================================== */
+
+
+
+
+
+
+
+
+
+  $card-padding         :  $global-spacing-unit;
+  $card-color           :  null !default;
+  $card-bg              :  $white !default;
+  
+  $card-border-width    :  1px;
+  $card-border-color    :  $gray-200;
+  $card-border-radius   :  5px;
+  
+  
+  
+  
+  
+    
+    
+    
+    
+    
+  .c-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    border: null;
+    border-radius: null;
+  }
+  
+  
+  .c-card__header {
+    padding: $card-padding;
+    margin-bottom: 0;  
+    border-bottom: $card-border-width solid $card-border-color;
+  }
+  
+  .c-card__body {
+    padding: $card-padding;
+    margin-bottom: 0;  
+  }
+  
+  .c-card__footer {
+    padding: $card-padding;
+    margin-bottom: 0;  
+    border-top: $card-border-width solid $card-border-color;
+  }
+  
+  
+  
+  
+  
+    
+  
+  
+  /* Card image
+    ========================================================================== */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .c-card__img,
+  .c-card__img--top,
+  .c-card__img--bottom {
+    flex-shrink: 0; // For IE: https://github.com/twbs/bootstrap/issues/29396
+    width: 100%;    // Required because we use flexbox and this inherently applies align-self: stretch
+  }
+  
+  .c-card__img,
+  .c-card__img--top {
+    border-top-left-radius:  $card-border-radius;
+    border-top-right-radius: $card-border-radius;
+  }
+  
+  .c-card__img,
+  .c-card__img--bottom {
+    border-bottom-left-radius:  $card-border-radius;
+    border-bottom-right-radius: $card-border-radius;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Flip card
+  ========================================================================== */
+  
+  
+  
+  
+  /* variables */
+  $card-height:      500px !default;
+  $card-transition:  all 800ms ease-in-out !default;
+  
+  
+  
+  
+  
+  
+  
+  /**
+  * - Create double sided flip card functionality
+  * 
+  * Flip card is the parent of both card sides (Front and Back).
+  * 
+  * 1. Parent to absolute positioned card side child
+  * 2. Prespective needs to be placed on the parent of the card sides (Front and back).
+  * 3. Transition must be placed on animated element.
+  * 4. Place card sided on top of one another
+  * 5. The back card should be rotated by default
+  * 6. Backface visibilty is set to hidden so on rotation the side of each card 
+  *    containing the content is visible
+  * 7. Hover has to be controled by parent due to elements being positioned on top
+  *    of one another.
+  * 8. Both card sides should be given and explicit height (NOTE: the height can be give here if there is only 
+  *    one component or given in different classes for different components of different heights )
+  *
+  */
+  
+  
+  
+  
+  @include hover(true) {
+  
+  
+    .c-card--flipcard {
+      position: relative;                  /* 1 */
+      perspective: 150rem;                 /* 2 */
+      min-height: $card-height;    
+      height: 100%;
+  
+  
+      &:hover .c-card__side--front {       /* 7 */
+        transform: rotateY(-180deg);  
+      }
+  
+      &:hover .c-card__side--back {        /* 7 */
+        transform: rotateY(0);
+      }
+    }
+  
+  
+    /* Children of flipcard */
+    .c-card__side {
+      backface-visibility: hidden;         /* 6 */
+      height: 100%;                        /* 8 */
+      transition: $card-transition;        /* 3 */
+    }
+  
+    .c-card__side--front {
+      position: absolute;                  /* 4 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  
+    .c-card__side--back { 
+      transform: rotateY(180deg);          /* 5 */
+    }   
+  
+  
+  
+  }
+  
 
 
 
@@ -11,45 +192,13 @@
 
 
 
-$card-padding        :  $global-spacing-unit;
-$card-color          :  null;
-$card-bg             :  $white;
 
-$card-border-width   :  1px;
-$card-border-color   :  null;
-$card-border-radius  :  $global-radius;
+
+  
 
 
 
-
-
-
-
-
-.c-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  word-wrap: break-word;
-  border: null;
-  border-radius: $card-border-radius;
-  background-color: $card-bg;
-}
-
-
-.c-card__header {
-  padding: $card-padding;
-  margin-bottom: 0;
-}
-
-
-.c-card__body {
-  padding: $card-padding;
-  margin-bottom: 0;
-}
-
-
-.c-card__footer {
-  padding: $card-padding;
-  margin-bottom: 0;  
-}
+  
+  
+  
+  

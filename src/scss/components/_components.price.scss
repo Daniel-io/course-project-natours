@@ -1,0 +1,28 @@
+/* ==========================================================================
+  #PRICE
+  ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+.c-price {
+  width: 100%;
+  color: $white;
+  text-align: center;
+  @include absolute-center;
+}
+
+.c-price__title {
+  margin-bottom: 0;
+}
+
+.c-price__amount {
+  font-size: 3rem;
+  font-weight: 100;
+}

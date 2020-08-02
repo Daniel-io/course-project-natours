@@ -1,0 +1,129 @@
+  /* ==========================================================================
+   #OPTIONS
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+/* Card image
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+.c-options__figure {
+  position: relative;
+  border-top-left-radius: $global-radius;
+  border-top-right-radius: $global-radius;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.c-options__figure--one {
+  background-image: linear-gradient(to right bottom, $color-secondary, $color-secondary-dark);
+}
+
+.c-options__figure--two {
+  background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+}
+
+.c-options__figure--three {
+  background-image: linear-gradient(to right bottom, $color-tertiary, $color-tertiary-dark);
+}
+
+.c-options__img {
+  mix-blend-mode: screen;
+  height: 13rem;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+/* Card title
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+.c-options__title {
+  position: absolute;
+  bottom: 0rem;
+  right: .5rem;
+
+  display: block;
+  width: 75%;
+  padding: $global-spacing-unit-sm;
+  color: $white;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  span {
+    padding: .5rem 1rem;
+  }
+
+  &--one span {
+    background-image: linear-gradient(to right bottom, $color-secondary, $color-secondary-dark);
+    box-decoration-break: clone;
+  }
+
+  &--two span {
+    background-image: linear-gradient(to right bottom, $color-primary, $color-primary-dark);
+    box-decoration-break: clone;
+  }
+
+  &--three span {
+    background-image: linear-gradient(to right bottom, $color-tertiary, $color-tertiary-dark);
+    box-decoration-break: clone;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Card side
+   ========================================================================== */
+
+
+
+
+
+@include hover(false) {
+
+  .c-options__card--back {
+    position: relative;
+    min-height: 250px;
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+    transform: translateY(-1.2rem);
+    box-shadow: $global-box-shadow-lg;
+  }
+
+}
